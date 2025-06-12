@@ -13,5 +13,7 @@ public class Admin extends Utilisateur{
     private String role;
     @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL , orphanRemoval = true)
     private List<Ticket> ticket;
+    @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Panne> panne;
 
 }
