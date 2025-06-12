@@ -1,4 +1,17 @@
 package com.marketplace.marketplace.itmanagment.Entity;
 
-public class Admin {
+import jakarta.persistence.*;
+
+import java.util.List;
+@Entity
+public class Admin extends Utilisateur{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
+    private Long id;
+    private String role;
+    @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL , orphanRemoval = true)
+    private List<Ticket> ticket;
+
 }
