@@ -1,4 +1,4 @@
-package com.marketplace.itmanagment.Entity;
+package com.marketplace.marketplace.itmanagment.Entity;
 
 
 import jakarta.persistence.*;
