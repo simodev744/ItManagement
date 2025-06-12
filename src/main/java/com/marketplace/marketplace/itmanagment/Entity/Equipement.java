@@ -1,9 +1,8 @@
 package com.marketplace.marketplace.itmanagment.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Equipement {
@@ -13,7 +12,10 @@ public class Equipement {
     private String name;
     private String type;
     private String UtilisateurAffected;
-
+    @ManyToOne
+    private Admin admin;
+    @OneToMany(mappedBy = "equipment", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Panne> panneList;
     public Equipement() {
 
     }
@@ -48,5 +50,19 @@ public class Equipement {
 
     public void setUtilisateurAffected(String utilisateurAffected) {
         UtilisateurAffected = utilisateurAffected;
+    }
+    public Admin getAdmin() {
+        return admin;
+    }
+    public void setAdmin(Admin admin) {
+        this.admin = admin;
+    }
+
+    public List<Panne> getPanneList() {
+        return panneList;
+    }
+
+    public void setPanneList(List<Panne> panneList) {
+        this.panneList = panneList;
     }
 }

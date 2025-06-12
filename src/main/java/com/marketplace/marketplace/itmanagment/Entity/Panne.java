@@ -14,9 +14,10 @@ public class Panne {
     private Date date;
     private String status;
     private String equipementId;
-
     @ManyToOne
     private Admin admin;
+    @ManyToOne
+    private Equipement equipment;
 
     public Long getId() {
         return id;
@@ -64,5 +65,13 @@ public class Panne {
 
     public void setAdmin(Admin admin) {
         this.admin = admin;
+    }
+
+    public Equipement getEquipment() {
+        return equipment;
+    }
+
+    public void setEquipment(Equipement equipment) {
+        this.equipment = equipment;
     }
 }
