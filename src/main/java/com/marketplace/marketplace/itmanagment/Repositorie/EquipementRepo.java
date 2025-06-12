@@ -1,4 +1,7 @@
 package com.marketplace.marketplace.itmanagment.Repositorie;
 
-public interface EquipementRepo {
+import com.marketplace.marketplace.itmanagment.Entity.Equipement;
+import org.springframework.data.repository.CrudRepository;
+
+public interface EquipementRepo extends CrudRepository<Equipement, Long> {
 }
