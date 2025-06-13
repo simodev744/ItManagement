@@ -39,4 +39,6 @@ public class EquipementDto   {
     public String getUtilisateurAffected() {
         return UtilisateurAffected;
     }
+
+
 }
