@@ -1,9 +1,15 @@
 package com.marketplace.marketplace.itmanagment.Entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
 @Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Admin extends Utilisateur{
 
     @Id
