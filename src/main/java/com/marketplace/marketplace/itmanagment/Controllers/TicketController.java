@@ -11,10 +11,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/ticket")
-@RequiredArgsConstructor
+
 public class TicketController {
 
-    private TicketService ticketService;
+    public TicketController(TicketService ticketService) {
+        this.ticketService = ticketService;
+    }
+
+    private final TicketService ticketService;
 
 
     @PostMapping

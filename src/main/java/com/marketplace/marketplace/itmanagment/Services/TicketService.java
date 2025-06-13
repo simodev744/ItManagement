@@ -5,11 +5,12 @@ import com.marketplace.marketplace.itmanagment.Entity.Ticket;
 import com.marketplace.marketplace.itmanagment.Mapper.TicketMapper;
 import com.marketplace.marketplace.itmanagment.Repositorie.TicketRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Service
 public class TicketService {
 
     private final TicketRepo ticketRepo;

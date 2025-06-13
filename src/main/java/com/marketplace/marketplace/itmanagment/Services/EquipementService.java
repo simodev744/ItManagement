@@ -7,11 +7,5 @@ import org.springframework.stereotype.Service;
 @Service
 public class EquipementService {
 
-    private final EquipementRepo equipementRepo;
-    private final EquipementMapper equipementMapper;
 
-    public EquipementService(EquipementRepo equipementRepo, EquipementMapper equipementMapper) {
-        this.equipementRepo = equipementRepo;
-        this.equipementMapper = equipementMapper;
-    }
 }
